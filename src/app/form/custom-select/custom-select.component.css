@@ -1,0 +1,45 @@
+input{
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    width: 96%;
+    border: 1px solid #e5e9ed;;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.select-input {
+    position: relative;
+    /* top: 0; */
+    /* width: 100%; */
+}
+
+.options {
+    position: absolute;
+    background: #fff;
+    top: 60px;
+    width: 507px;
+    border-radius: 10px;
+}
+ul.options__text {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul.options__text> li{
+        padding: 10px 0 ;
+        font-size: 19px;
+        overflow: auto;
+        border: 1px solid #e5e9ed;
+        border-radius: 10px;
+    /* border-bottom: 1px solid red; */
+
+}
+ul.options__text> li:hover{
+    background: #2c7095;
+    color: #fff;
+}
+input.select-input__input {
+    margin-top: 20px;
+}
+span.options__span {
+    padding: 0 15px;
+}

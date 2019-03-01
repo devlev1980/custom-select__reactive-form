@@ -1,0 +1,17 @@
+<div class="container">
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+
+    <div class="first"> 
+      <label>First Name</label>
+      <input type="text" formControlName="firstName"></div>
+
+    <div class="last"> <label>Last Name</label>
+      <input type="text" formControlName="lastName">
+    
+    </div>
+
+      <app-custom-select formControlName="select"></app-custom-select >
+
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+</div>
