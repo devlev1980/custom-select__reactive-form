@@ -39,12 +39,20 @@ ul.options__text> li{
     /* border-bottom: 1px solid red; */
 
 }
+ul.options__text> li:hover,
+input.select-input__input{
+    cursor: pointer;
+
+}
+
 ul.options__text> li:hover{
     background: #2c7095;
     color: #fff;
+    /* border-radius: 0; */
 }
 input.select-input__input {
     margin-top: 20px;
+    width: 90%;
 }
 span.options__span {
     padding: 0 15px;
