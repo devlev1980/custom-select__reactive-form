@@ -15,9 +15,9 @@ body{
 form{
     border: 6px solid #2c7095;
     background: #2c7095;
+    max-width: 500px;
+    width: 100%;
     padding: 1rem;
-    /* max-width: 700px; */
-    width: 20%;
     -webkit-box-shadow: -1px 3px 25px -4px rgba(102,102,102,1);
 -moz-box-shadow: -1px 3px 25px -4px rgba(102,102,102,1);
 box-shadow: -1px 3px 25px -4px rgba(102,102,102,1);
@@ -30,12 +30,12 @@ label{
     font-size: 20px;
 }
 .choose__option{
-    
+
 }
 input{
     margin-bottom: 10px;
     padding: 10px 10px;
-    width: 96%;
+    width: 90%;
     border: 1px solid #e5e9ed;;
     border-radius: 10px;
     font-size: 16px;

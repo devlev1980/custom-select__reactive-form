@@ -1,22 +1,28 @@
+.container{
+    position: relative;
+}
+
 input{
     margin-bottom: 10px;
     padding: 10px 10px;
-    width: 96%;
+    /* width: 96%; */
     border: 1px solid #e5e9ed;;
     border-radius: 10px;
     font-size: 16px;
 }
 .select-input {
-    position: relative;
+    /* position: relative; */
     /* top: 0; */
     /* width: 100%; */
+    position: relative;
 }
 
 .options {
     position: absolute;
-    background: #fff;
     top: 60px;
-    width: 507px;
+    width: 94%;
+    z-index: 10;
+    background: #fff;
     border-radius: 10px;
 }
 ul.options__text {
