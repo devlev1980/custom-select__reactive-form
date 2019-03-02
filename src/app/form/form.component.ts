@@ -20,9 +20,27 @@ export class FormComponent implements OnInit {
       select: [null]
     });
   }
+  get firstName() {
+    return this.dataForm.get('firstName');
+  }
+  get lastName() {
+    return this.dataForm.get('lastName');
+  }
+  get hasDropDownError() {
+    return (
+      this.dataForm.get('select').touched &&
+      this.dataForm.get('select').errors &&
+      this.dataForm.get('select').errors.required
+    );
+  }
 
   onSubmit() {
-    console.log('Data form', this.dataForm.value);
+    if (this.dataForm.invalid) {
+      return;
+    } else {
+      console.log('Data form', this.dataForm.value);
+
+    }
     // this.dataForm.valueChanges.subscribe(val => console.log(val));
 
   }

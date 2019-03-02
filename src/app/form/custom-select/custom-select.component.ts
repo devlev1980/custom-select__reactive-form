@@ -1,4 +1,4 @@
-import { Component, OnInit, forwardRef } from '@angular/core';
+import { Component, OnInit, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   }]
 })
 export class CustomSelectComponent implements OnInit, ControlValueAccessor {
+  @Input()selectControl;
   onChange: (val: string) => void;
   onTouched: () => void;
 
@@ -27,6 +28,7 @@ export class CustomSelectComponent implements OnInit, ControlValueAccessor {
 
 
   ngOnInit() {
+    console.log(this.selectControl);
   }
   onShowOptions() {
     this.showOptions = !this.showOptions;

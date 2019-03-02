@@ -1,19 +1,32 @@
 <div class="container">
-  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
 
-    <div class="first"> 
-      <label>First Name</label>
-      <input type="text" formControlName="firstName"></div>
+        <div class="first">
+            <label>First Name</label>
+            <input type="text" formControlName="firstName" required>
+            <div *ngIf="firstName?.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+                <div *ngIf="firstName.errors.required">
+                    Firstname is required.
+                </div>
+            </div>
 
-    <div class="last"> <label>Last Name</label>
-      <input type="text" formControlName="lastName">
-    
-    </div>
 
-      <app-custom-select formControlName="select"></app-custom-select >
-      <!-- <app-custom-select formControlName="select"></app-custom-select > -->
-      <!-- <app-custom-select formControlName="select"></app-custom-select > -->
 
-    <button type="submit" class="btn-submit">Submit</button>
-  </form>
+        </div>
+
+        <div class="last"> <label>Last Name</label>
+            <input type="text" formControlName="lastName" required>
+            <div *ngIf="lastName?.invalid && (lastName.dirty || lastName.touched)" class="alert">
+                <div *ngIf="lastName.errors.required">
+                    Lastname is required.
+                </div>
+            </div>
+        </div>
+
+        <app-custom-select formControlName="select" [selectControl]="select" required></app-custom-select>
+        <span *ngIf="hasDropDownError">Select is required</span>
+
+
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
 </div>

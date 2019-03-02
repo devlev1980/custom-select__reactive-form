@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="select-input">
-    <input [(ngModel)]="option" type="text" class="select-input__input" readonly (click)="onShowOptions()" placeholder="choose option ..." >
-  </div>
+    <div class="select-input">
+        <input [(ngModel)]="option" type="text" class="select-input__input" readonly (click)="onShowOptions()" placeholder="choose option ...">
+    </div>
 
-  <div class="options" *ngIf="showOptions">
-    <ul class="options__text">
-      <li *ngFor="let option of options"><span class="options__span" (click)="change(option)">{{option}}</span></li>
-    </ul>
-  </div>
+    <div class="options" *ngIf="showOptions">
+        <ul class="options__text">
+            <li *ngFor="let option of options"><span class="options__span" (click)="change(option)">{{option}}</span></li>
+        </ul>
+    </div>
 </div>
