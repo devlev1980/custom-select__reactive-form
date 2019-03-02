@@ -14,7 +14,8 @@
 
         </div>
 
-        <div class="last"> <label>Last Name</label>
+        <div class="last">
+            <label>Last Name</label>
             <input type="text" formControlName="lastName" required>
             <div *ngIf="lastName?.invalid && (lastName.dirty || lastName.touched)" class="alert">
                 <div *ngIf="lastName.errors.required">
@@ -23,12 +24,8 @@
             </div>
         </div>
 
-        <app-custom-select formControlName="select" [selectControl]="select" required>
-
-        </app-custom-select>
+        <app-custom-select formControlName="select" [selectControl]="select" required></app-custom-select>
         <span *ngIf="hasDropDownError" class="alert">Select is required</span>
-
-
 
         <button type="submit" class="btn-submit">Submit</button>
     </form>
