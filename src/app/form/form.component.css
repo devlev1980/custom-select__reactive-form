@@ -57,6 +57,7 @@ app-custom-select {
 }
 
 .alert {
+    display: block;
     color: #EE2E31;
     margin-bottom: 15px;
 }

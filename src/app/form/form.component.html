@@ -23,8 +23,11 @@
             </div>
         </div>
 
-        <app-custom-select formControlName="select" [selectControl]="select" required></app-custom-select>
-        <span *ngIf="hasDropDownError">Select is required</span>
+        <app-custom-select formControlName="select" [selectControl]="select" required>
+
+        </app-custom-select>
+        <span *ngIf="hasDropDownError" class="alert">Select is required</span>
+
 
 
         <button type="submit" class="btn-submit">Submit</button>

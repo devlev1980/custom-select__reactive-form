@@ -35,12 +35,10 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.dataForm.invalid) {
-      return;
-    } else {
       console.log('Data form', this.dataForm.value);
-
-    }
+      this.dataForm.controls['firstName'].markAsTouched();
+      this.dataForm.controls['lastName'].markAsTouched();
+      this.dataForm.controls['select'].markAsTouched();
     // this.dataForm.valueChanges.subscribe(val => console.log(val));
 
   }
