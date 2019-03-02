@@ -12,7 +12,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   }]
 })
 export class CustomSelectComponent implements OnInit, ControlValueAccessor {
-  @Input()selectControl;
   onChange: (val: string) => void;
   onTouched: () => void;
 
@@ -28,7 +27,6 @@ export class CustomSelectComponent implements OnInit, ControlValueAccessor {
 
 
   ngOnInit() {
-    console.log(this.selectControl);
   }
   onShowOptions() {
     this.showOptions = !this.showOptions;
@@ -38,21 +36,18 @@ export class CustomSelectComponent implements OnInit, ControlValueAccessor {
     this.showOptions = false;
   }
 
-
-
-
   touch() {
     this.onTouched();
   }
 
   change(val: string) {
+    console.log(val);
     this.option = val;
     this.showOptions = false;
     this.onChange(val);
   }
 
   writeValue(value: string) {
-
     console.log(`write value ${value}`);
   }
 
