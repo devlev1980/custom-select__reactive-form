@@ -41,7 +41,6 @@ export class FormComponent implements OnInit {
         this.dataForm.controls['select'].markAsTouched();
       } else {
         console.log('Data form', this.dataForm.value);
-
       }
     // this.dataForm.valueChanges.subscribe(val => console.log(val));
 
